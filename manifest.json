@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Instagram Etiketleyici",
+    "version": "1.0",
+    "description": "Takip ettiğin Instagram sayfalarını etiketle ve filtrele",
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+    "host_permissions": [
+        "https://www.instagram.com/*"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icons/icon.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.instagram.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
