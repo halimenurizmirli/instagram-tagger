@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 320px;
+            font-family: -apple-system, sans-serif;
+            background: #fff;
+        }
+
+        h2 {
+            padding: 16px;
+            font-size: 15px;
+            border-bottom: 1px solid #eee;
+            color: #111;
+        }
+
+        #tag-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 12px 16px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tag-btn {
+            background: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .tag-btn.active {
+            background: #0095f6;
+            color: #fff;
+        }
+
+        .tag-btn:hover {
+            background: #ddd;
+        }
+
+        .tag-btn.active:hover {
+            background: #0077c2;
+        }
+
+        #account-list {
+            padding: 8px 0;
+            max-height: 360px;
+            overflow-y: auto;
+        }
+
+        .account-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 16px;
+            border-bottom: 1px solid #f5f5f5;
+            cursor: pointer;
+        }
+
+        .account-item:hover {
+            background: #f9f9f9;
+        }
+
+        .account-item a {
+            font-weight: 600;
+            font-size: 13px;
+            color: #0095f6;
+            text-decoration: none;
+        }
+
+        .account-item a:hover {
+            text-decoration: underline;
+        }
+
+        .account-tags {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        .mini-tag {
+            background: #f0f0f0;
+            border-radius: 10px;
+            padding: 2px 8px;
+            font-size: 11px;
+            color: #555;
+        }
+
+        #empty {
+            padding: 24px;
+            text-align: center;
+            color: #aaa;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>🏷️ Instagram Etiketleyici</h2>
+    <div id="tag-filters"></div>
+    <div id="account-list"></div>
+    <div id="empty" style="display:none;">Bu etikette hesap yok.</div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
